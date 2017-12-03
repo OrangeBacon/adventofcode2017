@@ -5,14 +5,12 @@ digits = list(num)
 def get(i):
     return digits[i % len(digits)]
 
-print(len(digits))
-print(get(-1))
-print(get(2098))
+print(len(digits)/2)
 
 tosum = []
 
 for i in range(len(digits)):
-    if get(i) == get(i+1):
+    if get(i) == get(int(i+(len(digits)/2))):
         tosum.append(int(get(i)))
 
 print(str(sum(tosum)))
